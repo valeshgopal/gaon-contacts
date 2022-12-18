@@ -1,0 +1,47 @@
+.contactsSection {
+  padding: 20px 32px;
+  flex-basis: 85%;
+}
+
+.contactsSection h3 {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.contact {
+  height: 50px;
+  background: var(--color-secondary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  flex-basis: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name p {
+  color: var(--color-primary);
+}
+
+.link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  background-color: var(--color-primary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .contacts {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

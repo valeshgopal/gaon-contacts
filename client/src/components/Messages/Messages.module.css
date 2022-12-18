@@ -1,0 +1,32 @@
+.messages {
+  padding: 20px 32px;
+  /* display: flex; */
+}
+
+.messages h3 {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.messageContainer {
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.msgName {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.msg {
+  color: var(--color-primary);
+}
+
+.date {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}

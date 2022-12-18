@@ -1,0 +1,75 @@
+.popupContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+  padding: 16px 32px;
+  border-radius: 8px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popupHeader h3 {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0;
+}
+
+.popupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.popupForm input,
+.popupForm textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 16px;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  color: var(--color-primary);
+}
+
+.popupForm textarea {
+  height: 150px;
+  resize: none;
+  font-family: inherit;
+}
+
+.popupForm label {
+  color: var(--color-primary);
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.sendBtn {
+  border: 0;
+  outline: none;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .popup {
+    width: 85vw;
+  }
+}

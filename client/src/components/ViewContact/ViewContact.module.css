@@ -1,0 +1,50 @@
+.contactDetails {
+  padding: 20px 32px;
+  flex-basis: 85%;
+}
+
+.contactDetails h3 {
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: -20px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.userDetails p {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.userDetails span {
+  font-weight: 400;
+}
+
+.sendBtn {
+  border: 0;
+  outline: none;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .userContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
