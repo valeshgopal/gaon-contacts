@@ -28,12 +28,14 @@ const MessagePopup = ({ name, phoneNumber, setShowPopup }) => {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    console.log('response: ', response);
+    const data = await response.json();
+    const json = JSON.parse(data);
 
     if (!response.ok) {
+      setSending(false);
       toast({
         title: 'Something went wrong!',
-        description: 'Please try again later.',
+        description: json.result,
         status: 'error',
         duration: 3000,
         isClosable: true,
@@ -42,7 +44,7 @@ const MessagePopup = ({ name, phoneNumber, setShowPopup }) => {
       setShowPopup(false);
       toast({
         title: 'Success!',
-        description: 'Your message has been sent successfully',
+        description: 'OTP has been sent successfully',
         status: 'success',
         duration: 3000,
         isClosable: true,

@@ -22,10 +22,17 @@ const createMessage = (req, res) => {
     })
     .then(() => {
       const message = Message.create({ name, phoneNumber, msg });
-      res.status(200).json(message);
+      // res.status(200).json(message);
+      res.status(200).json(JSON.stringify({ success: true, result: message }));
     })
     .catch((err) => {
       console.log(err);
+      res.status(501).json(
+        JSON.stringify({
+          success: false,
+          result: err.message,
+        })
+      );
     });
 };
 
